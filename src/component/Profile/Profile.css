@@ -1,16 +1,22 @@
 .profile-container{
-  
+  border: 2px solid gainsboro;
+  margin-bottom: 10px;
+  width: 700px;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: gainsboro;
+  ;
 }
 
 .cover-pic{
-    width: 70%;
-    height: 30%;
+    width: 700px;
     border-radius: 10px;
 }
 .autho-bio{
     display: flex;
     justify-content: start;
     align-items: center;
+    
     
 }
 .author-info{

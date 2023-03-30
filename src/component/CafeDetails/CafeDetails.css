@@ -7,3 +7,10 @@
 .cafe-profile{
  
 }
+
+@media screen and (max-width:600px) {
+    .cafe-Container{
+        flex-direction: column;
+    }
+    
+}

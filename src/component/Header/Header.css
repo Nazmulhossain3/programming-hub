@@ -33,9 +33,11 @@
         flex-direction: column;
         background-color: bisque;
     }
+    
     .nav a{
         display: flex;
         flex-direction: column;
         text-align: justify;
+        
     }
  }
