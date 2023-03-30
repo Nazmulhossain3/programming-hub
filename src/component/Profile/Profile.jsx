@@ -24,6 +24,10 @@ const Profile = ({profile}) => {
             
             </div>
             
+            <h2>{Blog_title}</h2>
+            <span> #programming #begainer</span> <br /> <br />
+            <a href="">Mark as read</a>
+
         </div>
     );
 };
