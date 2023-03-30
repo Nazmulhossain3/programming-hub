@@ -1,0 +1,8 @@
+.cafe-Container{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+.cafe-profile{
+    width: 70%;
+}

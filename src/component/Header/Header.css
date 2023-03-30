@@ -1,0 +1,41 @@
+.header{
+ background-color:antiquewhite ;
+ padding: 10px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+
+ .nav{
+    margin-right: 100px;
+ }
+ p{
+    font-size: 20px;
+    margin-left: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+ }
+
+ .nav a{
+    text-decoration: none;
+    margin-right: 30px;
+    font-size: 20px;
+    color: black;
+ }
+
+ .nav a:hover{
+    background-color: tomato;
+    padding: 5px;
+    border-radius: 4px;
+ }
+
+ @media screen and (max-width : 600px) {
+    .header{
+        flex-direction: column;
+        background-color: bisque;
+    }
+    .nav a{
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+    }
+ }
