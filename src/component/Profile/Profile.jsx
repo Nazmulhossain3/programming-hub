@@ -19,7 +19,7 @@ const Profile = ({profile,handleBookMark}) => {
            
                 <div className="book-mark">
                     <p>{Read_time}<span>mn to read</span></p>
-                    <FontAwesomeIcon icon={faBookmark} onClick={()=> handleBookMark()} />
+                    <FontAwesomeIcon icon={faBookmark} onClick={()=> handleBookMark(Blog_title)} />
                 </div>
             
             </div>

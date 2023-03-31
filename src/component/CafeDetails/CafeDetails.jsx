@@ -6,6 +6,7 @@ import './CafeDetails.css'
 const CafeDetails = () => {
     const [profiles,setProfiles] = useState([])
     const[blog,setBlog] = useState(0)
+    const [blogTitle,setBlogTitle] = useState([])
 
     useEffect(()=>{
         fetch('data.json')
@@ -19,8 +20,11 @@ const CafeDetails = () => {
         
     },[])
   
-    const handleBookMark = ()=> {
+    const handleBookMark = (blogName)=> {
       setBlog(blog + 1)
+       const addedTitle = [...blogTitle,blogName]
+       
+       setBlogTitle(addedTitle)
     
     }
     
@@ -42,7 +46,7 @@ const CafeDetails = () => {
            
            
            <div className="cafe-details">
-            <SideCart blog={blog}></SideCart>
+            <SideCart blog={blog} blogTitle={blogTitle}></SideCart>
            </div>
            
            
