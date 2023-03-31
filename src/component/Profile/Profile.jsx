@@ -3,7 +3,7 @@ import './Profile.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
-const Profile = ({profile,handleBookMark}) => {
+const Profile = ({profile,handleBookMark,handleMarkAsRead}) => {
     const {Author_name,Blog_title,Publish_Date,Read_time,author_pic,cover_pic,id} = profile
     
     return (
@@ -26,7 +26,7 @@ const Profile = ({profile,handleBookMark}) => {
             
             <h2>{Blog_title}</h2>
             <span> #programming #begainer</span> <br /> <br />
-            <a href="">Mark as read</a>
+            <a onClick={()=> handleMarkAsRead(Read_time)}>Mark as read</a>
 
         </div>
     );

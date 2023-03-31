@@ -7,6 +7,7 @@ const CafeDetails = () => {
     const [profiles,setProfiles] = useState([])
     const[blog,setBlog] = useState(0)
     const [blogTitle,setBlogTitle] = useState([])
+    const [readTime,setReadTime] = useState(0)
 
     useEffect(()=>{
         fetch('data.json')
@@ -29,6 +30,12 @@ const CafeDetails = () => {
     }
     
     
+    const handleMarkAsRead = (Read_time)=> {
+      setReadTime(readTime + Read_time)
+      
+    }
+
+    
     return (
         <div>
            <div className="cafe-Container">
@@ -39,6 +46,7 @@ const CafeDetails = () => {
                     profiles.map(profile => <Profile 
                         profile={profile}
                         handleBookMark ={handleBookMark}
+                        handleMarkAsRead ={handleMarkAsRead}
                          key={profile.id}></Profile>)
                 }
             </div>
@@ -46,7 +54,7 @@ const CafeDetails = () => {
            
            
            <div className="cafe-details">
-            <SideCart blog={blog} blogTitle={blogTitle}></SideCart>
+            <SideCart readTime={readTime} blog={blog} blogTitle={blogTitle} key={readTime}></SideCart>
            </div>
            
            

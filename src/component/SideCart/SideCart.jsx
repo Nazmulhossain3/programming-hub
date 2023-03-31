@@ -1,10 +1,10 @@
 import React from 'react';
 
-const SideCart = ({blog,blogTitle}) => {
+const SideCart = ({blog,blogTitle,readTime}) => {
     
     return (
         <div>
-           <p> Spent time on read :0 <span>min</span></p>
+           <p> Spent time on read :{readTime} <span>min</span></p>
             <p> Bookmarked Blogs : {blog}</p>
            {
             blogTitle.map(title => <p>title : {title}</p>)
