@@ -3,9 +3,9 @@ import './Profile.css'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
-const Profile = ({profile}) => {
+const Profile = ({profile,handleBookMark}) => {
     const {Author_name,Blog_title,Publish_Date,Read_time,author_pic,cover_pic,id} = profile
-    console.log(profile)
+    
     return (
         <div className='profile-container'>
             <img className='cover-pic' src={cover_pic} alt="" />
@@ -18,8 +18,8 @@ const Profile = ({profile}) => {
                 </div>
            
                 <div className="book-mark">
-                    <p>{Read_time}</p>
-                    <FontAwesomeIcon icon={faBookmark} />
+                    <p>{Read_time}<span>mn to read</span></p>
+                    <FontAwesomeIcon icon={faBookmark} onClick={()=> handleBookMark()} />
                 </div>
             
             </div>
