@@ -1,0 +1,10 @@
+.ans-ques{
+    text-align: justify;
+    border: 2px solid gainsboro;
+    width: 700px;
+    padding: 20px;
+    background-color: darkgray;
+    margin-left:50px ;
+    border-radius: 20px;
+  
+}

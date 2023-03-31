@@ -1,8 +1,11 @@
 import React from 'react';
 import './Profile.css'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBookmark } from '@fortawesome/free-solid-svg-icons'
+import { ToastContainer,toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const Profile = ({profile,handleBookMark,handleMarkAsRead}) => {
     const {Author_name,Blog_title,Publish_Date,Read_time,author_pic,cover_pic,id} = profile
     
@@ -19,15 +22,16 @@ const Profile = ({profile,handleBookMark,handleMarkAsRead}) => {
            
                 <div className="book-mark">
                     <p>{Read_time}<span>mn to read</span></p>
-                    <FontAwesomeIcon icon={faBookmark} onClick={()=> handleBookMark(Blog_title)} />
+                    <FontAwesomeIcon icon={faBookmark} onClick={()=> handleBookMark(Blog_title,toast,profile.id)} />
                 </div>
             
             </div>
             
             <h2>{Blog_title}</h2>
             <span> #programming #begainer</span> <br /> <br />
-            <a onClick={()=> handleMarkAsRead(Read_time)}>Mark as read</a>
+            <a className='read-time' onClick={()=> handleMarkAsRead(Read_time)}>Mark as read</a>
 
+            <ToastContainer />
         </div>
     );
 };

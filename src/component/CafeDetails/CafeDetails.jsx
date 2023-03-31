@@ -8,6 +8,7 @@ const CafeDetails = () => {
     const[blog,setBlog] = useState(0)
     const [blogTitle,setBlogTitle] = useState([])
     const [readTime,setReadTime] = useState(0)
+    const [isBookmark,setIsBookMark] = useState(false)
 
     useEffect(()=>{
         fetch('data.json')
@@ -18,16 +19,21 @@ const CafeDetails = () => {
 
     useEffect(()=>{
         
-        
     },[])
   
-    const handleBookMark = (blogName)=> {
-      setBlog(blog + 1)
-       const addedTitle = [...blogTitle,blogName]
-       
-       setBlogTitle(addedTitle)
+    const handleBookMark = (blogName,toast,id)=> {
+        // const findBlog = profiles.find(profile => profile.id ===id)
+        
+    if(blogTitle.includes(blogName)){
+    return toast('You Have Already Bookmarked This Blog');
+     }
+    else{
     
+    setBlogTitle([...blogTitle,blogName])
+    setBlog(blog + 1)   
     }
+    }
+    
     
     
     const handleMarkAsRead = (Read_time)=> {

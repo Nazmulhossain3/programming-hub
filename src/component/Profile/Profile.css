@@ -4,7 +4,7 @@
   width: 700px;
   padding: 20px;
   border-radius: 30px;
-  background-color: gainsboro;
+  background-color: rgba(223, 217, 221, 0.219);
   ;
 }
 
@@ -38,6 +38,12 @@
     align-items: center;
     gap: 5px;
     margin-left: 250px;
+    cursor: pointer;
    
 }
- 
+.read-time{
+    text-decoration: underline;
+    color: rgb(189, 75, 10);
+    cursor: pointer;
+}
+

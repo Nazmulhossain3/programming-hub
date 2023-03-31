@@ -32,12 +32,15 @@
     .header{
         flex-direction: column;
         background-color: bisque;
+        width: 100%;
+        margin: auto 0;
     }
     
     .nav a{
         display: flex;
         flex-direction: column;
         text-align: justify;
+       
         
     }
  }
